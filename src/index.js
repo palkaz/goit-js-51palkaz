@@ -1,9 +1,9 @@
  module_01.1
 // const a = 10;
-// console.log('index a:', a);
+// console.log("index a:", a);
 
-// // Просимо клієнта підтвердити бронювання готелю
-// // і зберігаємо результат роботи confirm у змінну
+// Просимо клієнта підтвердити бронювання готелю
+// і зберігаємо результат роботи confirm у змінну
 // const isComing = confirm("Please confirm hotel reservation");
 // console.log(isComing);
 
@@ -11,8 +11,15 @@
 // console.log(`Hello`, userName); // string
 // console.log(`Hello`, Number(userName)); // number
 
-// const x = 15;
+// const x = 16;
+
 // console.log(x % 8);
+
+// const value = 27.5;
+// Math.floor(value);
+//  Math.ceil(value);
+//  Math.round(value);
+//  console.log(Math.ceil(value));
 
 // const y = 27;
 // console.log('парне число:', y % 2 === 0); // парне число
@@ -21,9 +28,9 @@
 // let i = 1;
 // console.log(i);
 
-// // i = i + 1;
-// // console.log(i);
-// console.log(i = i + 1);
+// i = i + 1;
+// console.log(i);
+// console.log((i = i + 1));
 
 // // i += 1;
 // // console.log(i);
@@ -48,16 +55,18 @@
 
 // console.log(total);
 
-// const diff = grapes - apples;
+// const diff = apples - grapes;
 
-// console.log(diff);
+// // console.log(diff);
+
+// console.log(Math.abs(diff)); //по модулю
 
 // ==================
 // Example 2 - Комбинированные операторы
 // Замени выражение переопределения комбинированным оператором +=.
 
 // let students = 100;
-// // students = students + 50;
+// students = students + 50;
 // students += 50;
 // console.log(students);
 
@@ -119,5 +128,9 @@
 // const bmi = Number((weight / Math.pow(height, 2)).toFixed(1));
 
 // console.log(bmi); // 28.8
-console.log('module 01.1');
- main
+//  module_01.1
+// console.log('4' == 4);
+
+// console.log('module 01.1');
+//  main
+
