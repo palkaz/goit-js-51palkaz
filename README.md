@@ -1,1 +1,1 @@
-# goit-js-51
+# goit-js-51palkaz
