@@ -1,3 +1,4 @@
+ module_01.1
 // const a = 10;
 // console.log("index a:", a);
 
@@ -132,6 +133,7 @@
 // const bmi = Number((weight / Math.pow(height, 2)).toFixed(1));
 
 // console.log(bmi); // 28.8
+
 // // console.log('4' == 4);
 // Решал Самостоятельно
 // Составь фразу с помощью шаблонных строк A has B bots in stock, где A, B - переменные вставленные в строку.
@@ -436,3 +438,4 @@
 // } else {
 //   console.log('Отменено');
 // }
+
