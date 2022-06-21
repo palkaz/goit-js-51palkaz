@@ -1,4 +1,4 @@
- module_01.1
+//  module_01.1
 // const a = 10;
 // console.log("index a:", a);
 
@@ -439,3 +439,39 @@
 //   console.log('Отменено');
 // }
 
+// function normalizeInput(input) {
+//   const normalizedInput = input.toUpperCase(); // Change this line
+//     let input = aSaSAaa;
+//   return normalizedInput;
+// }
+// console.log(return);
+
+// slugify('Arrays for begginers');
+// function slugify(title) {
+//   // Change code below this line
+//   const titleArraySplit = title.split(' ');
+//   console.log(titleArraySplit);
+//   const titleArrayJoin = titleArraySplit.join('-');
+//   console.log(titleArrayJoin);
+//   console.log(titleArrayJoin.toLowerCase());
+//   return titleArrayJoin.toLowerCase();
+//   // Change code above this line
+// }
+makeArray(
+['Mango', 'Poly', 'Houston'];
+ ['Ajax', 'Chelsea'];
+ 4;)
+// console.log(firstArray);
+function makeArray(firstArray, secondArray, maxLength) {
+  //   const firstArray = ['Mango', 'Poly', 'Houston'];
+  //   const secondArray = ['Ajax', 'Chelsea'];
+  //   const maxLength = 4;
+
+  // Change code below this line
+  console.log(firstArray);
+  const allArray = firstArray.concat(secondArray);
+  console.log(allArray);
+  allArray.length > maxLength ? allArray.slice(0, maxLength) : allArray.length();
+  return allArray;
+  // Change code above this line
+}
