@@ -1,4 +1,4 @@
- module_01.1
+//  module_01.1
 // const a = 10;
 // console.log("index a:", a);
 
@@ -439,3 +439,139 @@
 //   console.log('Отменено');
 // }
 
+// function calculateTotal(number) {
+//   //   console.log(number);
+//   //   Change code below this line
+//   {
+//     let result = 0;
+//     for (let i = 0; i <= number; i = i + 1) {
+//       result = result + i;
+//     }
+//     return result;
+//   }
+// }
+
+// console.log(`Результат:`, calculateTotal(24));
+
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// for (let i = 0; i < fruits.length; i += 1) {
+//   // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(`Результат функции;`, fruit);
+// }
+// ===========================================
+// const order = [1, 2, 3];
+// // console.log(order.length);
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+//   for (let i = 0; i < order.length; i += 1) {
+//     // console.log(order[i]);
+//     total = total + order[i];
+//     console.log(`total=`, total);
+//   }
+//   // Change code above this line
+//   return total;
+// }
+// console.log(`Результат:`, calculateTotalPrice([3, 4, 5]));
+// =========================================
+// function findLongestWord(string) {
+//   // Change code below this line
+//   // =================
+
+//   const stringArray = string.split(' ');
+//   let longesWord = stringArray[0];
+//   // console.log(stringArray);
+
+//   for (let i = 0; i < stringArray.length; i += 1) {
+//     if (stringArray[i].length > longesWord.length) {
+//       console.log(`if test:`, stringArray[i].length);
+//       console.log(`if test:`, stringArray[i]);
+//       longesWord = stringArray[i];
+//       // console.log(`test:`, longesWord);
+//     }
+
+//     // console.log(stringArray.length[i]);
+//     // console.log(longesWord);
+//   }
+//   return longesWord;
+
+// }
+
+// console.log(findLongestWord('May the force be with you'));
+
+// ====================================
+// function createArrayOfNumbers(min, max) {
+//   // Change code below this line
+//   const numbers = [];
+//   // numbers.push(min);
+//   // numbers.push(max);
+//   // console.log(`numbers`, numbers);
+//   let pushPast = max - min;
+//   for (let i = min; i <= max; i += 1) {
+//     // console.log(`numbers`, numbers);
+//     numbers.push(i);
+//   }
+//   // numbers.push(max);
+//   // Change code above this line
+//   return numbers;
+// }
+// console.log(createArrayOfNumbers(17, 21));
+// ==========================================
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//   const presentValue = [];
+//   // console.log(value);
+//   for (
+//     let i = 1;
+//     i < numbers.length;
+//     i += 1 // console.log(presentValue);
+//   ) {
+//     if (numbers[i] > value) {
+//       // console.log([i]);
+//       // console.log(`numbers`, numbers[i]);
+//       presentValue.push(numbers[i]);
+//       // console.log(presentValue);
+//     }
+//   }
+//   return presentValue;
+// }
+// // Change code above this line
+
+// console.log(filterArray([1, 3, 6, 8, 2], 2));
+// // =======================
+// function checkFruit(fruit) {
+//   const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+//   let res = fruits.includes(fruit);
+
+//   return res; // Change this line
+// }
+// console.log(checkFruit('pear'));
+// console.log(checkFruit('Pear'));
+// =======================
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+//   const newArray = [];
+//   for (variable of array1) {
+//     if (array2.includes(variable)) {
+//       newArray.push(variable);
+//     }
+//   }
+
+//   return newArray;
+//   // Change code above this line
+// }
+// =================================
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+
+//   for (varibel of order) {
+//     total = varibel + total;
+//   }
+
+//   // Change code above this line
+//   return total;
+// }
