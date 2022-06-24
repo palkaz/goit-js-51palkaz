@@ -1,4 +1,5 @@
-// console.log('module 03.1');
+console.log('module 03.1');
+console.log('Автопроверка 1-20');
 
 // ==== question ====
 // const book = {
@@ -323,3 +324,351 @@
 // ======= location test =======
 // const location = 123; // Uncaught SyntaxError: Identifier 'location' has already been declared (at index.js:1:1)
 // console.log(location); // window.location
+
+// ===========task 01 in 41 =============
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+//   tags: ['premium', 'promoted', 'top'],
+// };
+// ===========task 02 in 41 =============
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+//   tags: ['premium', 'promoted', 'top'],
+//   owner: {
+//     name: 'Henry',
+//     phone: '982-126-1588',
+//     email: 'henry.carter@aptmail.com',
+//   },
+// };
+// console.log(apartment);
+// ===========task 03 in 41 =============
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+//   tags: ['premium', 'promoted', 'top'],
+// };
+
+// // Change code below this line
+// const aptRating = apartment.rating;
+// const aptDescr = apartment.descr;
+// const aptPrice = apartment.price;
+// const aptTags = apartment.tags;
+// // Change code above this line
+// console.log(apartment);
+// ===========task 04 in 41 =============
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+//   tags: ['premium', 'promoted', 'top'],
+//   owner: {
+//     name: 'Henry',
+//     phone: '982-126-1588',
+//     email: 'henry.carter@aptmail.com',
+//   },
+// };
+
+// // Change code below this line
+// const ownerName = apartment.owner.name;
+// const ownerPhone = apartment.owner.phone;
+// const ownerEmail = apartment.owner.email;
+// const numberOfTags = apartment.tags.length;
+// const firstTag = apartment.tags[0];
+// const lastTag = apartment.tags[2];
+// // Change code above this line
+// console.log(ownerName);
+// console.log(ownerPhone);
+// console.log(ownerEmail);
+// console.log(numberOfTags);
+// console.log(firstTag);
+// console.log(lastTag);
+// ===========task 05 in 41 =============
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+//   tags: ['premium', 'promoted', 'top'],
+// };
+
+// // Change code below this line
+// const aptRating = apartment['rating'];
+// const aptDescr = apartment['descr'];
+// const aptPrice = apartment['price'];
+// const aptTags = apartment['tags'];
+// // Change code above this line
+// console.log(aptRating);
+// console.log(aptDescr);
+// console.log(aptPrice);
+// console.log(aptTags);
+// ===========task 06 in 41 =============
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+//   tags: ['premium', 'promoted', 'top'],
+//   owner: {
+//     name: 'Henry',
+//     phone: '982-126-1588',
+//     email: 'henry.carter@aptmail.com',
+//   },
+// };
+
+// // Change code below this line
+// apartment.price = 5000;
+// apartment.rating = 4.7;
+// apartment.owner.name = 'Henry Sibola';
+// apartment.tags.push('trusted');
+// ===========task 07 in 41 =============
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ['premium', 'promoted', 'top', 'trusted'],
+//   owner: {
+//     name: 'Henry Sibola',
+//     phone: '982-126-1588',
+//     email: 'henry.carter@aptmail.com',
+//   },
+// };
+
+// // Change code below this line
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = {
+//   country: 'Jamaica',
+//   city: 'Kingston',
+// };
+// ===========task 08 in 41 =============
+// const name = 'Repair Droid';
+// const price = 2500;
+// const image = 'https://via.placeholder.com/640x480';
+// const tags = ['on sale', 'trending', 'best buy'];
+
+// const product = {
+//   // Change code below this line
+//   name,
+//   price,
+//   image,
+//   tags,
+//   // Change code above this line
+// };
+// ===========task 09 in 41 =============
+// const emailInputName = 'email';
+// const passwordInputName = 'password';
+
+// const credentials = {
+//   // Change code below this line
+
+//   email: 'henry.carter@aptmail.com',
+//   password: 'jqueryismyjam',
+//   emailInputName,
+//   passwordInputName,
+//   // Change code above this line
+// };
+// ===========task 10 in 41 =============
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// // Change code below this line
+// for (const key in apartment) {
+//   console.log(keys.push(key));
+//   console.log(values.push(apartment[key]));
+// }
+// ===========task 11 in 41 =============
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: 'apt',
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = 'Spacious apartment in the city center';
+// apartment.rating = 4;
+// apartment.price = 2153;
+
+// for (const key in apartment) {
+//   // Change code below this line
+//   if (apartment.hasOwnProperty(key)) {
+//     keys.push(key);
+//     values.push(apartment[key]);
+//   }
+//   // Change code above this line
+// }
+// ===========task 11 in 41 =============
+// function countProps(object) {
+//   let propCount = 0;
+//   // Change code below this line
+// const keys = Object.keys(object);
+//   for(const key in keys ){
+//  if(keys.hasOwnProperty(key)){
+//   keys.push(key);
+
+// }
+//   // Change code above this line
+//   return propCount;
+// }
+//     console.log(countProps({ name: "Mango", age: 2 }));
+// ===========task 12 in 41 =============
+// function countProps(object) {
+//   let propCount = 0;
+//   // Change code below this line
+//   const keys = Object.keys(object);
+//   for (const key in keys) {
+//     propCount += 1;
+//   }
+//   // Change code above this line
+//   return propCount;
+// }
+// ===========task 13 in 41 =============
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// for (const key of keys) {
+//   values.push(apartment[key]);
+// }
+// ===========task 14 in 41 =============
+// function countProps(object) {
+//   // Change code below this line
+//   let propCount = 0;
+//   const keys = Object.keys(object);
+
+//   propCount = keys.length;
+
+//   return propCount;
+//   // Change code above this line
+// }
+// ===========task 15 in 41 =============
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// const values = Object.values(apartment);
+// ===========task 16 in 41 =============
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+//   const values = Object.values(salaries);
+//   for (const value of values) {
+//     totalSalary += value;
+//     // console.log(values);
+//     // console.log(totalSalary);
+//   }
+//   // Change code above this line
+//   //   console.log(totalSalary);
+//   return totalSalary;
+// }
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 });
+// ===========task 17 in 41 =============
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+// ===========task 18 in 41 =============
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   console.log(productName);
+//   // Change code below this line
+//   for (const product of products) {
+//     //   console.log(product.price);
+//     // console.log(productName);
+//     if (product.name === productName) {
+//       console.log(product.name, `:`, product.price);
+//       return product.price;
+//     }
+//     // console.log(productName);
+//     // console.log(`null`);
+//     // return product.price;
+//     // return productName;
+//   }
+//   console.log(productName, `:`, null);
+
+//   return null;
+//   // Change code above this line
+// }
+// // console.log(getProductPrice);
+// getProductPrice('Grip');
+// ===========task 19 in 41 =============
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   console.log(`проверка1:`, propName);
+//   let resPropName = [];
+//   //   const keys = Object.keys(product);
+//   //   const keys = Object.keys(products);
+//   //   console.log(products);
+//   for (const product of products) {
+//     if (product.hasOwnProperty([propName])) {
+//       resPropName.push(product[propName]);
+//     }
+//   }
+//   //   resPropName = [];
+//   console.log(`проверка:`, resPropName);
+//   return resPropName;
+//   // Change code above this line
+// }
+// getAllPropValues('ame');
+// ===========task 20 in 41 =============
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Пиши код ниже этой строки
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price * product.quantity;
+//     }
+//   }
+//   return 0;
+//   // Пиши код выше этой строки
+// }
+// // calculateTotalPrice('Blaster');
+// console.log(calculateTotalPrice('Radar'));
