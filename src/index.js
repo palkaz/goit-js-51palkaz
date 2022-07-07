@@ -1,441 +1,1298 @@
- module_01.1
-// const a = 10;
-// console.log("index a:", a);
+console.log('module 04.2');
 
-// Просимо клієнта підтвердити бронювання готелю
-// і зберігаємо результат роботи confirm у змінну
-// const isComing = confirm("Please confirm hotel reservation");
-// console.log(isComing);
-
-// const userName = prompt("What is your name?");
-// console.log(`Hello`, userName); // string
-// console.log(`Hello`, Number(userName)); // number
-
-// const x = 16;
-
-// console.log(x % 8);
-
-// const value = 27.5;
-// Math.floor(value);
-//  Math.ceil(value);
-//  Math.round(value);
-//  console.log(Math.ceil(value));
-
-// const y = 27;
-// console.log('парне число:', y % 2 === 0); // парне число
-// console.log('не парне число', y % 2 !== 0); // не парне число
-
-// let i = 1;
-// console.log(i);
-
-// i = i + 1;
-// console.log(i);
-// console.log((i = i + 1));
-
-// // i += 1;
-// // console.log(i);
-// console.log(i += 1);
-
-// // i++;
-// // console.log(i);
-// console.log(i++); // post-increment
-// console.log(i); // 4
-
-// // ++i;
-// // console.log(i);
-// console.log(++i); // pre-increment
-
-// ==================
-// Example 1 - Базовые математические операторы
-// Выведи на экран общее количество яблок и винограда. Разницу яблок и винограда.
-
-// const apples = 47;
-// const grapes = 135;
-// const total = apples + grapes;
-
-// console.log(total);
-
-// const diff = apples - grapes;
-
-// // console.log(diff);
-
-// console.log(Math.abs(diff)); //по модулю
-
-// ==================
-// Example 2 - Комбинированные операторы
-// Замени выражение переопределения комбинированным оператором +=.
-
-// let students = 100;
-// students = students + 50;
-// students += 50;
-// console.log(students);
-
-// ==================
-// Example 3 - Приоритет операторов
-// Разбери приоритет операторов в инструкции присвоения значения переменной result.
-
-// const result = 108 + 223 - 2 * 5;
-// console.log(result);
-
-// ==================
-// Example 4 - Класс Math
-// Напиши скрипт, который выводит в консоль округленные вверх/вниз и т.д. значения переменной value. Используй методы Math.floor(), Math.ceil() и Math.round(). Проверь что будет в консоли при значениях 27.3 и 27.9.
-
-// const value = 27.5;
-
-// console.log(Math.floor(value)); // 27
-// console.log(Math.ceil(value)); // 28
-// console.log(Math.round(27.4)); // 27
-// console.log(Math.round(27.5)); // 28
-
-// const x = 3.1415
-// console.log(x.toFixed(3));
-
-// ==================
-// Составь фразу с помощью шаблонных строк A has B bots in stock, где A, B - переменные вставленные в строку.
-
-// const companyName = 'Cyberdyne Systems';
-// const repairBots = 150;
-// const defenceBots = 50;
-// const totalBots = repairBots + defenceBots;
-// const message = `${companyName} has ${totalBots} bots in stock`;
-
-// console.log(message); // "Cyberdyne Systems has 200 bots in stock"
-
-// ==================
-// Example 6 - Методы строк и чейнинг
-// Напиши скрипт который рассчитывает индекс массы тела человека. Для этого необходимо разделить вес в киллограммах на квадрат высоты человека в метрах.
-// Вес и высота хранятся в переменных weight и height, но не как числа, а в виде строк (специально для задачи). Нецелые числа могут быть заданы в виде 24.7 или 24,7, то есть в качестве разделителя дробной части может быть запятая.
-// Индекс массиы тела необходимо округлить до одной цифры после запятой;
-
-// let weight = '88,3';
-// let height = '1.75';
-
-// weight = weight.replace(',', '.');
-// height = height.replace(',', '.');
-
-// weight = Number.parseFloat(weight);
-// height = Number.parseFloat(height);
-
-// let bmi = weight / Math.pow(height, 2);
-// bmi = bmi.toFixed(1);
-// bmi = Number(bmi);
-// console.log(bmi);
-
-// let bmi = weight / Math.pow(height, 2);
-// bmi = bmi.toFixed(1);
-// bmi = Number(bmi);
-
-// console.log(bmi); // 28.8
-
-// const weight = Number.parseFloat('88,3'.replace(',', '.'));
-// const height = Number.parseFloat('1.75'.replace(',', '.'));
-// const bmi = Number((weight / Math.pow(height, 2)).toFixed(1));
-
-// console.log(bmi); // 28.8
-
-// // console.log('4' == 4);
-// Решал Самостоятельно
-// Составь фразу с помощью шаблонных строк A has B bots in stock, где A, B - переменные вставленные в строку.
-// const companyName = 'Cyberdyne Systems';
-// const A = `has`;
-// const B = `bots in stock`;
-// const repairBots = 150;
-// const defenceBots = 50;
-// const totalBots = repairBots + defenceBots;
-// const message = `${companyName} ${A} ${totalBots} ${B}`;
-// console.log(message); // "Cyberdyne Systems has 200 bots in stock"
-
-// Example 6 - Методы строк и чейнинг
-// Напиши скрипт который рассчитывает индекс массы тела человека. Для этого необходимо разделить вес в киллограммах на квадрат высоты человека в метрах.
-
-// Вес и высота хранятся в переменных weight и height, но не как числа, а в виде строк (специально для задачи). Нецелые числа могут быть заданы в виде 24.7 или 24,7, то есть в качестве разделителя дробной части может быть запятая.
-
-// Индекс массиы тела необходимо округлить до одной цифры после запятой;
-
-// let weight = '88,3';
-// let height = '1.75';
-// weight = weight.replace(',', '.');
-// height = height.replace(',', '.');
-
-// weight = Number.parseFloat(weight);
-// height = Number.parseFloat(height);
-// let bmi = weight / Math.pow(height, 2);
-// bmi = bmi.toFixed(1);
-// bmi = Number(bmi);
-
-// console.log(bmi);
-// console.log(bmi); // 28.8
-// console.log(5 > 4);
-// console.log(10 >= '7');
-// console.log('2' > '12');
-// console.log('2' < '12');
-// console.log('4' == 4);
-// console.log('6' === 6);
-// console.log('false' === false);
-// console.log(1 == true);
-// console.log(1 === true);
-// console.log('0' == false);
-// console.log('0' === false);
-// console.log('Papaya' < 'papaya');
-// console.log('Papaya' === 'papaya');
-// console.log(undefined == null);
-// console.log(undefined === null);
-
-// Example 8 - Логические операторы
-// Каким будет результат выражений?
-// console.log(true && 3);
-// console.log(false && 3);
-// console.log(true && 4 && 'kiwi');
-// console.log(true && 0 && 'kiwi');
-// console.log(true || 3);
-// console.log(true || 3 || 4);
-// console.log(true || false || 7);
-// console.log(null || 2 || undefined);
-// console.log((1 && null && 2) > 0);
-// console.log(null || (2 && 3) || 4);
-// const target = 3;
-// let sum = 0;
-
-// for (let i = 0; i <= target; i += 1) {
-//   sum += i;
+// function sum(a, b) {
+//   console.log(a + b);
 // }
+
+// sum(1, 2);
+
+// ===== callback =====
+// function fn1() {
+//   console.log('hello');
+// }
+
+// function fn2() {
+//   console.log('world');
+// }
+
+// function sayHello(callback1, callback2) {
+//   callback1();
+//   callback2();
+// }
+
+// sayHello(fn1, fn2);
+// // sayHello(fn1, fn1);
+// sayHello(fn1, () => console.log('Bobby'));
+
+// ===== unique items =====
+// const numbers = [1, 3, 2, 1, 4, 2, 2, 1, 3, 5];
+
+// function getUniqueItems1(arr) {
+//   const res = [];
+
+//   arr.forEach((item) => {
+//     if (!res.includes(item)) {
+//       res.push(item);
+//     }
+//   });
+
+//   return res;
+// }
+
+// function getUniqueItems2(arr) {
+//   const res = [];
+
+//   arr.forEach((item, idx) => {
+//     if (arr.indexOf(item) === idx) {
+//       res.push(item);
+//     }
+//   });
+
+//   return res;
+
+//   // return arr.filter((item, idx) => arr.indexOf(item) === idx);
+// }
+
+// const getUniqueItems3 = (arr) => Array.from(new Set(arr));
+
+// console.log(getUniqueItems1(numbers));
+// console.log(getUniqueItems2(numbers));
+// console.log(getUniqueItems3(numbers));
+
+// ====== reduce - sum ======
+// const numbers = [3, 1, 2, 5, 4]; // 15
+
+// // let acc = 0;
+
+// // for (const item of numbers) {
+// //   acc += item;
+// // }
+
+// // console.log(acc);
+
+// const sum = numbers.reduce((acc, item) => (acc += item), 0);
 
 // console.log(sum);
-// const max = 10;
-// for (let i = 0; i < max; i += 1) {
-//   console.log(`${max} % ${i} = `, max % i);
-// }
-// for (let i = 0; i <= 5; i += 1) {
-//   console.log(i);
 
-//   if (i === 3) {
-//     console.log('Нашли число 3, прерываем выполнение цикла');
-//     break;
+// ====== reduce - min, max ======
+// const numbers = [3, 1, 2, 5, 4]; // 15
+
+// let acc = numbers[0];
+
+// for (const item of numbers) {
+//   if (item < acc) {
+//     acc = item;
 //   }
 // }
 
-// console.log('Лог после цикла');
-// const number = 10;
+// console.log(acc);
 
-// for (let i = 0; i < number; i += 1) {
-//   if (i % 2 === 0) {
-//     continue;
-//   }
+// const min = numbers.reduce((acc, item) => (item < acc ? item : acc));
+// const max = numbers.reduce((acc, item) => (item > acc ? item : acc));
 
-//   console.log('Нечетное i: ', i); // 1, 3, 5, 7, 9
-// }
+// console.log(min);
+// console.log(max);
 
-// const incomingValue = 0;
-// const defaultValue = 10;
-// const value1 = incomingValue || defaultValue;
-// const value2 = incomingValue ?? defaultValue;
-// console.log(value1);
-// console.log(value2);
+// ========================================
+const cars = [
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'Accord',
+    type: 'sedan',
+    amount: 2,
+    price: 22455,
+    onSale: true,
+  },
+  {
+    make: 'Mazda',
+    model: 'Mazda 6',
+    type: 'sedan',
+    amount: 8,
+    price: 24195,
+    onSale: false,
+  },
+  {
+    make: 'Mazda',
+    model: 'CX-9',
+    type: 'suv',
+    amount: 7,
+    price: 31520,
+    onSale: true,
+  },
+  {
+    make: 'Toyota',
+    model: '4Runner',
+    type: 'suv',
+    amount: 19,
+    price: 34210,
+    onSale: false,
+  },
+  {
+    make: 'Toyota',
+    model: 'Sequoia',
+    type: 'suv',
+    amount: 16,
+    price: 45560,
+    onSale: false,
+  },
+  {
+    make: 'Toyota',
+    model: 'Tacoma',
+    type: 'truck',
+    amount: 4,
+    price: 24320,
+    onSale: true,
+  },
+  {
+    make: 'Ford',
+    model: 'F-150',
+    type: 'truck',
+    amount: 11,
+    price: 27110,
+    onSale: true,
+  },
+  {
+    make: 'Ford',
+    model: 'Fusion',
+    type: 'sedan',
+    amount: 13,
+    price: 22120,
+    onSale: true,
+  },
+  {
+    make: 'Ford',
+    model: 'Explorer',
+    type: 'suv',
+    amount: 6,
+    price: 31660,
+    onSale: false,
+  },
+];
 
-// const totalMinutes = 256;
-// const hours = Math.floor(totalMinutes / 60);
-// const minutes = totalMinutes % 60;
-// console.log(hours);
-// console.log(minutes);
+// Example 1 - Метод map
+// Пусть функция getModels возвращает массив моделей (поле model) всех автомобилей.
 
-// const doubleDigitHours = String(hours).padStart(2, 0);
-// const doubleDigitMinutes = String(minutes).padStart(2, 0);
-// console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
+// const getModels = (cars) => cars.map(({ model }) => model);
 
-// const userAnswer = prompt('Какое офицальное название JavaScript?');
-// if (userAnswer.toLowerCase() === 'ECMAScript'.toLowerCase()) {
-//   console.log('Верно!');
-// } else {
-//   console.log('Не верно,попытайтесь ещё');
-// }
+// console.table(getModels(cars));
 
-// const userAnswer = prompt('Какое офицальное название JavaScript?');
-// console.log(
-//   userAnswer.toLowerCase() === 'ECMAScript'.toLocaleLowerCase()
-//     ? 'Верно!'
-//     : 'Не верно,попытайтесь ещё'
-// );
+// Example 2 - Метод map
+// Пусть функция makeCarsWithDiscount возвращает новый массив объектов с изменным значением свойства price в зависимости от переданной скидки.
 
-// Example 2 - Отображение времени (if...else)
-// Напиши скрипт для отображения часов и минут в консоли браузера в виде строки формата "14 ч. 26 мин.".Если значение переменной minutes равно 0, то выводи строку "14 ч.", без минут.
+// const makeCarsWithDiscount = (cars, discount) =>
+//   cars.map((car) => {
+//     return {
+//       // ...car,
+//       model: car.model,
+//       oldPrice: car.price,
+//       newPrice: car.price - car.price * discount,
+//     };
+//   });
 
-// const hours = 14;
-// const minutes = 10;
-// let timestring;
+// console.table(makeCarsWithDiscount(cars, 0.2));
+// console.table(makeCarsWithDiscount(cars, 0.4));
 
-// if (minutes > 0) {
-//   timestring = `${hours} ч. ${minutes} мин.`;
-// } else {
-//   timestring = `${hours} ч.`;
-// }
-// console.log(timestring);
+// Example 3 - Метод filter
+// Пусть функция filterByPrice возвращает массив автомобилей цена которых меньше чем значение параметра threshold.
 
-// const hours = 14;
-// const minutes = 10;
-// console.log(minutes > 0 ? `${hours} ч. ${minutes} мин.` : `${hours} ч.`);
+// const filterByPrice = (cars, threshold) =>
+//   cars.filter(({ price }) => price <= threshold);
 
-// const userInput = prompt('Введите число');
-// const number = Number(userInput);
-// let answer;
-// if (userInput > 0) answer = 'Число положительное.';
-// if (userInput < 0) answer = 'Число отрицательное.';
-// if (userInput == 0) answer = 'Это ноль.';
-// console.log(answer);
+// console.table(filterByPrice(cars, 30000));
+// console.table(filterByPrice(cars, 25000));
 
-// const userInput = prompt('Введите число');
-// const number = Number(userInput) || 0;
-// let answer;
-// if (userInput > 0) {
-//   answer = 'Число положительное.';
-// } else if (userInput < 0) {
-//   answer = 'Число отрицательное.';
-// } else {
-//   answer = 'Это ноль.';
-// }
-// console.log(answer);
+// Example 4 - Метод filter
+// Пусть функция getCarsWithDiscount возвращает массив автомобилей свойство onSale которых true.
 
-// Example 4 - Вложенные ветвления
-// Напиши скрипт, который сравнивает числа в переменных a и b. Если оба значения больше 100, то выведи в консоль максимальное из них. В противном случае в консоли должна быть сумма значения b и числа 512.
+// const getCarsWithDiscount = (cars) => cars.filter(({ onSale }) => onSale);
 
-// const a = 20;
-// const b = 180;
+// console.table(getCarsWithDiscount(cars));
 
-// if (a > 100 && b > 100) {
-//   let res;
-//   if (a > b) {
-//     res = a;
-//   } else {
-//     res = b;
-//   }
-//   console.log(res);
-// } else {
-//   let res;
-//   res = b + 512;
-//   console.log(res);
-// }
+// Example 5 - Метод filter
+// Пусть функция getCarsWithType возвращает массив автомобилей тип которых совпадает со значением параметра type.
 
-// Example 5 - Форматирование ссылки (endsWith)
-// Напиши скрипт который проверяет заканчивается ли значение переменной link символом /. Если нет, добавь в конец значения link этот символ. Используй конструкцию if...else.
+// const getCarsWithType = (cars, carType) =>
+//   cars.filter(({ type }) => type === carType);
 
-// let link = 'https://my-site.com/about';
-// // Пиши код ниже этой строки
-// // if (!link.endsWith('/')) link += '/';
-// // Пиши код выше этой строки
-// console.log(link);
+// console.table(getCarsWithType(cars, 'suv'));
+// console.table(getCarsWithType(cars, 'sedan'));
 
-// Example 6 - Форматирование ссылки (includes и логическое «И»)
-// Напиши скрипт который проверяет заканчивается ли значение переменной link символом /. Если нет, добавь в конец значения link этот символ, но только в том случае, если в link есть подстрока "my-site". Используй конструкцию if...else.
+// Example 6 - Метод find
+// const getCarByModel = (cars, model) => cars.find((car) => car.model === model);
 
-// let link = 'https://somesite.com/about';
-// let link = 'https://my-site.com/about';
-// Пиши код ниже этой строки
-// if (!link.endsWith('/') && link.includes('my-site')) link += '/';
-// Пиши код выше этой строки
-// console.log(link);
+// console.log(getCarByModel(cars, 'F-150'));
+// console.log(getCarByModel(cars, 'CX-9'));
 
-// Example 7 - Форматирование ссылки (тернарный оператор)
-// Выполни рефакторинг кода задачи номер 4 используя тернарный оператор.
+// Example 7 - Метод sort
+// Пусть функция sortByAscendingAmount возвращает новый массив автомобилей отсортированный по возврастанию значения свойства amount.
 
-// let link = 'https://somesite.com/about';
-// let link = 'https://my-site.com/about';
-// if (link.includes('my-site') && !link.endsWith('/')) {
-//   link += '/';
-// }
-// link += link.includes('my-site') && !link.endsWith('/') ? '/' : '';
-// console.log(link);
+// const sortByAscendingAmount = (cars) =>
+//   [...cars].sort((a, b) => a.price - b.price);
 
-// Example 8 - if...else и логические операторы
-// Напиши скрипт который будет выводить в консоль браузера строку в зависимости от значения переменной hours.
-// Если значение переменной hours:
-// меньше 17, выводи строку "Pending"
-// больше либо равно 17 и меньше либо равно 24, выводи строку "Expires"
-// больше 24 , выводи строку "Overdue"
+// console.table(sortByAscendingAmount(cars));
 
-// const hours = 27;
-// let text;
-// if (hours < 17) {
-//   text = 'Pending';
-// } else if (hours >= 17 && hours <= 24) {
-//   text = 'Expires';
-// } else {
-//   text = 'Overdue';
-// }
-// console.log(text);
+// Example 8 - Метод sort
+// Пусть функция sortByDescendingPrice возвращает новый массив автомобилей отсортированный по убыванию значения свойства price.
 
-// Example 9 - Дедлайн сдачи проекта (if...else)
-// Напиши скрипт для отображения времени дедлайна сдачи проекта. Используй конструкцию if...else.
+// const sortByDescendingPrice = (cars) =>
+//   [...cars].sort((a, b) => b.price - a.price);
 
-// Eсли до дедлайна 0 дней - выведи строку "Сегодня"
-// Eсли до дедлайна 1 день - выведи строку "Завтра"
-// Eсли до дедлайна 2 дня - выведи строку "Послезавтра"
-// Eсли до дедлайна 3+ дней - выведи строку "Дата в будущем"
-// const daysUntilDeadline = 3;
-// // Пиши код ниже этой строки
-// let text;
-// if (daysUntilDeadline === 0) {
-//   text = 'Сегодня';
-// } else if (daysUntilDeadline === 1) {
-//   text = 'Завтра';
-// } else if (daysUntilDeadline === 2) {
-//   text = 'Послезавтра';
-// } else if (daysUntilDeadline >= 3) {
-//   text = 'Дата в будущем';
-// }
-// console.log(text);
+// console.table(sortByDescendingPrice(cars));
 
-// Выполни рефакторинг кода задачи номер 5 используя switch.
+// ========= sort ========
+// const numbers = [3, 1, 2, 5, 10, 4]; // 15
 
-// const daysUntilDeadline = 3;
-// let text;
-// switch (daysUntilDeadline) {
-//   case 0:
-//     text = 'Сегодня';
-//     break;
-//   case 1:
-//     text = 'Завтра';
-//     break;
-//   case 2:
-//     text = 'Послезавтра';
-//     break;
-//   default:
-//     text = 'Дата в будущем';
-// }
-// console.log(text);
+// numbers.sort((a, b) => {
+//   if (a < b) return -1765; <0
+//   if (a > b) return 198;  >0
 
-// Example 11 - Цикл for
-// Напиши цикл for который выводит в консоль браузера числа по возрастанию от min до max, но только если число кратное 5.
+//   return 0;
+// });
 
-// const max = 100;
-// const min = 20;
-// for (let i = min; i <= max; i += 1) {
-//   if (i % 5 === 0) console.log(i);
-// }
+// numbers.sort((a, b) => a - b);
 
-// Example 12 - Ввод пользователя и ветвления
-// Напиши скрипт, который будет спрашивать логин с помощью prompt и логировать результат в консоль браузера.
+// console.log(numbers);
 
-// Если посетитель вводит "Админ", то prompt запрашивает пароль
-// Если ничего не введено или нажата клавиша Esc - вывести строку "Отменено"
-// В противном случае вывести строку "Я вас не знаю"
-// Пароль проверять так:
+// Example 9 - Метод sort
+// Пусть функция sortByModel возвращает новый массив автомобилей отсортированный по названию модели в алфавитном и обратном алфавитном порядке, в засисимости от значения параметра order.
 
-// Если введён пароль "Я админ", то вывести строку "Здравствуйте!"
-// Иначе выводить строку "Неверный пароль"
-// const login = prompt('login');
-// if (login) {
-//   if (login === 'Админ') {
-//     const password = prompt('Password');
+// const sortByModel = (cars, order) =>
+//   [...cars].sort((a, b) =>
+//     order === 'desc'
+//       ? b.model.localeCompare(a.model)
+//       : a.model.localeCompare(b.model)
+//   );
 
-//     if (password === 'Я админ') {
-//       console.log('Здравствуйте!');
-//     } else {
-//       console.log('Неверный пароль');
-//     }
-//   } else {
-//     console.log('Я вас не знаю');
-//   }
-// } else {
-//   console.log('Отменено');
-// }
+// console.table(sortByModel(cars, 'asc'));
+// console.table(sortByModel(cars, 'desc'));
 
+// Example 10 - Метод reduce
+// Пусть функция getTotalAmount возвращает общее количество автомобилей(значение свойств amount).
+
+// const getTotalAmount = (cars) => cars.reduce((acc, car) => acc + car.amount, 0);
+
+// console.log(getTotalAmount(cars));
+
+// Example 11 - Цепочки методов
+// Пусть функция getAvailableCarNames возвращает массив моделей автомобилей, но только тех, которые сейчас на распродаже.
+
+// const getModelsOnSale = (cars) =>
+//   cars.filter(({ onSale }) => onSale).map(({ model }) => model);
+
+// console.table(getModelsOnSale(cars));
+
+// Example 12 - Цепочки методов
+// Пусть функция getSortedCarsOnSale возвращает массив автомобилей на распродаже (свойство onSale), отсортированных по возрастанию цены.
+
+// const getSortedCarsOnSale = (cars) =>
+//   cars.filter(({ onSale }) => onSale).sort((a, b) => a.price - b.price);
+
+// console.table(getSortedCarsOnSale(cars));
+
+// ====== every =====
+// const numbers = [2, 4, 6, 8, 10]; // 15
+// console.log(numbers.every((item) => item % 2 === 0));
+
+// ====== some =====
+// const numbers = [1, 3, 5, 6, 7, 9]; // 15
+// console.log(numbers.some((item) => item % 2 === 0));
+
+// =====================task 25 in 48 ===========================
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
+// const getFriends = users =>
+//   users.flatMap(user => user.friends).filter((user, index, array) => array.indexOf(user) === index);
+// console.log(users.flatMap);
+
+// =====================task 26 in 48 ===========================
+// const getActiveUsers = users => users.filter(user => user.isActive === true);
+// console.log(getActiveUsers(users));
+// getActiveUsers(users);
+// console.log(users);как проверить?
+// =====================task 27 in 48 ===========================
+// Дополни функцию getInactiveUsers(users) так, чтобы она возвращала массив неактивных пользователей, значение свойства isActive которых false.
+
+// const getInactiveUsers = users => users.filter(user => user.isActive !== true);
+// =====================task 28 in 48 ===========================
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+// ];
+// const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+// const AUTHOR = 'Robert Sheckley';
+// // Change code below this line
+
+// // const bookWithTitle = books.find(book => book.title === BOOK_TITLE);
+// // const bookWithTitle = books => {
+// //   return books.find(book => book.title === BOOK_TITLE);
+// // };
+
+// // const bookByAuthor = books.find(book => book.author === AUTHOR);
+// console.log(bookWithTitle);
+
+// =====================task 29 in 48 ===========================
+// [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+// // Дополни функцию getUserWithEmail(users, email) так, чтобы она возвращала объект пользователя, почта которого (свойство email) совпадает со значением параметра email.
+// // Change code below this line
+// // const getUserWithEmail = (users, email) => users.find(user => user.email === email);
+
+// const getUserWithEmail = (users, email) => {
+//   return users.find(user => user.email === email);
+// };
+// // Change code above this line
+// // console.log(getUserWithEmail(users, 'shereeanthony@kog.com'));
+// console.table(getUserWithEmail(users, 'shereeanthony@kog.com'));
+
+// =====================task 30 in 48 ===========================
+// Используя метод every() дополни код так, чтобы:
+
+// В переменной eachElementInFirstIsEven был результат проверки всех элементов массива firstArray на чётность.
+// В переменной eachElementInFirstIsOdd был результат проверки всех элементов массива firstArray на нечётность.
+// В переменной eachElementInSecondIsEven был результат проверки всех элементов массива secondArray на чётность.
+// В переменной eachElementInSecondIsOdd был результат проверки всех элементов массива secondArray на нечётность.
+// В переменной eachElementInThirdIsEven был результат проверки всех элементов массива thirdArray на чётность.
+// В переменной eachElementInThirdIsOdd был результат проверки всех элементов массива thirdArray на нечётность.
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change code below this line
+
+// const eachElementInFirstIsEven = firstArray.every(value => value % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every(value => value % 2 !== 0);
+
+// const eachElementInSecondIsEven = secondArray.every(value => value % 2 === 0);
+// const eachElementInSecondIsOdd = secondArray.every(value => value % 2 !== 0);
+
+// const eachElementInThirdIsEven = thirdArray.every(value => value % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every(value => value % 2 !== 0);
+
+// =====================task 31 in 48 ===========================
+// [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+
+// // Дополни функцию isEveryUserActive(users) так, чтобы она проверяла все ли пользователи сейчас активны (свойство isActive) и возвращала true или false.
+// // Change code below this line
+// const isEveryUserActive = users => {
+//   return users.every(user => user.isActive);
+// };
+// // аналогичная запись
+// // const isEveryUserActive = users => users.every(user => user.isActive);
+// // Change code above this line
+// console.log(isEveryUserActive);
+
+// =====================task 32 in 48 ===========================
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change below this line
+
+// const anyElementInFirstIsEven = firstArray.some(value => value % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some(value => value % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some(value => value % 2 === 0);
+// const anyElementInSecondIsOdd = secondArray.some(value => value % 2 !== 0);
+
+// const anyElementInThirdIsEven = thirdArray.some(value => value % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some(value => value % 2 !== 0);
+
+// =====================task 33 in 48 ===========================
+// [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+
+// // Дополни функцию isAnyUserActive(users) так, чтобы она проверяла наличие активных пользователей (свойство isActive) и возвращала true или false.
+// // Change code below this line
+// const isAnyUserActive = users => {
+//   return users.some(user => user.isActive);
+// };
+
+// // Change code above this line
+
+// =====================task 34 in 48 ===========================
+// Игровому сервису необходим функционал подсчёта среднего времени проведённого в играх. Дополни код так, чтобы в переменной totalPlayTime получилось общее игровое время из массива playtimes.
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244,
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Change code below this line
+
+// const totalPlayTime = playtimes.reduce((acc, number) => {
+//   return acc + number;
+// });
+
+// // Change code above this line
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+// =====================task 35 in 48 ===========================
+// Нашему сервису необходимо рассчитать среднее время проведённое в одной игре для каждого игрока, и получить общую сумму этих времён. Рассчитать время для каждого из игроков, можно разделив его время (свойство playtime) на количество игр (свойство gamesPlayed).
+// const players = [
+//   { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+//   { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+//   { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+//   { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players.reduce((acc, player) => {
+//   return acc + player.playtime / player.gamesPlayed;
+// }, 0);
+// const averageScore = totalAveragePlaytimePerGame / players.length;
+
+// =====================task 36 in 48 ===========================
+// Дополни функцию calculateTotalBalance(users) так, чтобы она считала и возвращала сумму всех средств (свойство balance) которые хранят пользователи из массива users.
+// [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+// // Change code below this line
+// const calculateTotalBalance = users => users.reduce((total, user ) => {
+//   return total + user.balance;
+// },0 );
+// // Change code above this line
+
+// =====================task 37 in 48 ===========================
+// [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+// // Change code below this line
+// const getTotalFriendCount = users =>
+//   users.reduce((acc, user) => {
+//     return acc + user.friends.length;
+//   }, 0);
+// // Change code above this line
+// console.log(getTotalFriendCount);
+
+// =====================task 38 in 48 ===========================
+// Дополни код так, чтобы в переменной ascendingReleaseDates получилась отсортированная по возрастанию копия массива releaseDates, а в переменной alphabeticalAuthors копия массива имён авторов authors отсортированная в по алфавиту.
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = ['Tanith Lee', 'Bernard Cornwell', 'Robert Sheckley', 'Fyodor Dostoevsky'];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+
+// =====================task 39 in 48 ===========================
+// Онлайн бибилиотеке необходимо отображать книги сортированные по дате издания, по её возрастанию или убыванию. Дополни код так, чтобы в переменной ascendingReleaseDates получилась отсортированная по возрастанию копия массива releaseDates, а в переменной descendingReleconst releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a,b)=> a-b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a,b)=> b-a);
+
+// =====================task 40 in 48 ===========================
+// Онлайн бибилиотеке необходимо отображать книги отсортированные по автору, в алфавитном и обратном алфавитном порядке. Дополни код так, чтобы в переменной authorsInAlphabetOrder получилась отсортированная по алфавиту копия массива authors, а в переменной authorsInReversedOrder копия отсортированная в обратном алфавитном порядке.
+// const authors = [
+//   'Tanith Lee',
+//   'Bernard Cornwell',
+//   'Robert Sheckley',
+//   'Fyodor Dostoevsky',
+//   'Howard Lovecraft',
+// ];
+// // Change code below this line
+
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+// console.log(authorsInAlphabetOrder);
+// console.table(authorsInAlphabetOrder);
+
+// =====================task 41 in 48 ===========================
+// Дополни код так, чтобы:
+
+// В переменной sortedByAuthorName получился массив книг отсортированный по имени автора в алфавитном порядке.
+// В переменной sortedByReversedAuthorName получился массив книг отсортированный по имени автора в обратном алфавитном порядке.
+// В переменной sortedByAscendingRating получился массив книг отсортированный по возрастанию рейтинга.
+// В переменной sortedByDescentingRating получился массив книг отсортированный по убыванию рейтинга.
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+// ];
+// // Change code below this line
+
+// const sortedByAuthorName = [...books].sort((a, b) => a.author.localeCompare(b.author));
+
+// const sortedByReversedAuthorName = [...books].sort((a, b) => b.author.localeCompare(a.author));
+
+// const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
+
+// const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
+// console.log(sortedByAuthorName);
+
+// =====================task 42 in 48 ===========================
+// [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+
+// // Change code below this line
+// // const sortByAscendingBalance = users => {
+// //    return [...users].sort((a,b)=> a.balance - b.balance)
+// // };
+// const sortByAscendingBalance = users => [...users].sort((a, b) => a.balance - b.balance);
+
+// // Change code above this line
+
+// =====================task 43 in 48 ===========================
+// [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+// // Дополни функцию sortByDescendingFriendCount(users) так, чтобы она возвращала массив пользователей отсортированный по убыванию количества их друзей (свойство friends).
+// // Change code below this line
+// const sortByDescendingFriendCount = users => {
+//   return [...users].sort((a,b)=>b.friends.length-a.friends.length)
+// };
+// // Change code above this line
+
+// =====================task 44 in 48 ===========================
+// библиотека таже
+// Дополни функцию sortByName(users) так, чтобы она возвращала массив пользователей отсортированный по их имени (свойство name) в алфавитном порядке.
+
+// // Change code below this line
+// const sortByName = users => {
+//    return [...users].sort((a,b)=> a.name.localeCompare(b.name))
+// };
+// // Change code above this line
+
+// =====================task 45 in 48 ===========================
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   {
+//     title: 'The Dreams in the Witch House',
+//     author: 'Howard Lovecraft',
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+
+// const names = books
+//   .filter(book => book.rating > MIN_BOOK_RATING)
+//   .map(book => book.author)
+//   .sort((a, b) => a.localeCompare(b));
+
+// console.log(names);
+
+// =====================task 46 in 48 ===========================
+// Дополни функцию getNamesSortedByFriendCount(users) так, чтобы она возвращала массив имён пользователей отсортированный по возрастанию количества их друзей (свойство friends).
+// [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong', 'Adrian Cross'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman', 'Adrian Cross', 'Solomon Fokes'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+
+// const getNamesSortedByFriendCount = users => {
+//   return [...users].sort((a, b) => a.friends.length - b.friends.length).map(user => user.name);
+// };
+// console.log(getNamesSortedByFriendCount);
+
+// =====================task 47 in 48 ===========================
+// Дополни функцию getSortedFriends(users) так, чтобы она возвращала массив уникальных имён друзей (свойство friends) отсортированный по алфавиту .
+// [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong', 'Adrian Cross'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman', 'Adrian Cross', 'Solomon Fokes'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+// // Change code below this line
+// const getSortedFriends = users => {
+//    return users.flatMap(user=> user.friends)
+//    .filter((friend,index,array) => array.indexOf(friend)===index)
+//    .sort((a,b)=> a.localeCompare(b))
+// };
+
+// // Change code above this line
+
+// =====================task 48 in 48 ===========================
+// библиотека как в задаче 47
+// Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей (свойство balance), пол которых (свойство gender) совпадает со значением параметра gender.
+// Change code below this line
+
+// const getTotalBalanceByGender = (users, gender) => {
+//   return users
+//     .filter(u => u.gender === gender)
+//     .map(user => user.balance)
+//     .reduce((p, c) => p + c, 0);
+// };
+// // Change code above this line
+// console.log(getTotalBalanceByGender);
