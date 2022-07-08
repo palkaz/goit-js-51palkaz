@@ -1296,3 +1296,5 @@ const cars = [
 // };
 // // Change code above this line
 // console.log(getTotalBalanceByGender);
+// console.dir(_.flatMapDeep);
+// //
